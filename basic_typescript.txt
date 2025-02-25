@@ -1,0 +1,11 @@
+export: 다른 파일에서 사용할 수 있도록 내보냄
+type: 새로운 타입을 정의할 때 사용
+interface: 객체의 구조를 정의할 때 사용
+
+
+const [state, setState] = useState(initialValue);
+state: 현재 상태 값
+setState: 상태를 변경하는 함수
+initialValue: 초기 상태 값
+
+Lead[]: Lead 타입의 배열(Array)
