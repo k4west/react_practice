@@ -1,0 +1,26 @@
+# Create vite project
+npm create vite@latest <project-name>> --template react
+cd <project-name>
+npm install
+
+# Install tailwindcss
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+# Error in npx tailwindcss -> uninstall -> install previous version
+npm uninstall tailwindcss
+npm install tailwindcss@3
+npx tailwindcss init -p
+
+# Modify tailwind.config.js
+content: [] 
+-> content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]
+
+# Modify src/index.css
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
