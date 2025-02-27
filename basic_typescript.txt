@@ -8,4 +8,23 @@ state: 현재 상태 값
 setState: 상태를 변경하는 함수
 initialValue: 초기 상태 값
 
+
 Lead[]: Lead 타입의 배열(Array)
+
+
+... : 전개 연산자, Spread Operator
+| Operator | Used with | Result |
+|--------|----------|------|
+| `...` | Array `[]` | Expands individual elements |
+| `...` | Object `{}` | Copies properties while overriding existing ones |
+
+
+Props: Properties; 
+pydantic.BaseModel으로 데이터 구조를 강제하고,
+python에서 calss의 __init__()에 인자를 전달하는 것과 유사
+| Reason for using Props | Description |
+|--------|------------|
+| Reusability | The same component can be used with different values. |
+| Parent-to-child data transfer | Parents can pass data to child components. |
+| Dynamic UI | Components can adapt to different values dynamically. |
+| Event handling | Parent components can pass functions to children for execution. |

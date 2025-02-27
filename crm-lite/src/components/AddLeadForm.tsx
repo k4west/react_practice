@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Lead, LeadStatus } from "../types/Lead"
+import { Lead, LeadStatus, LeadElemet } from "../types/Lead"
 
 // Props: Lead 구조의 객체를 입력 받아서 처리하는 함수를 원소로 갖는 객체
 interface Props {
@@ -39,38 +39,10 @@ const AddLeadForm = ({ onAddLead }: Props) => {// Destructuring Assignmen
   return (
     <form onSubmit={handleSubmit} className="p-4 border rounded-lg">
       <h3 className="text-lg font-semibold">Add Lead</h3>
-        <input
-          type="text"
-          placeholder="Company Name"
-          value={companyName}
-          onChange={(e) => setCompanyName(e.target.value)} // 입력값 변경
-          className="border p-2 w-full mt-2"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Contact Name"
-          value={contactName}
-          onChange={(e) => setContactName(e.target.value)}
-          className="border p-2 w-full mt-2"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="border p-2 w-full mt-2"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className="border p-2 w-full mt-2"
-          required
-        />
+        <LeadElemet val={companyName} placeholder="Company Name" setVal={setCompanyName} />
+        <LeadElemet val={contactName} placeholder="Contact Name" setVal={setContactName} />
+        <LeadElemet val={email} placeholder="Email" setVal={setEmail} />
+        <LeadElemet val={phone} placeholder="Phone" setVal={setPhone} />
         <select
           value={status}
           onChange={(e) => setStatus(e.target.value as LeadStatus)}
