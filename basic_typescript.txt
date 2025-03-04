@@ -28,3 +28,8 @@ python에서 calss의 __init__()에 인자를 전달하는 것과 유사
 | Parent-to-child data transfer | Parents can pass data to child components. |
 | Dynamic UI | Components can adapt to different values dynamically. |
 | Event handling | Parent components can pass functions to children for execution. |
+
+
+Conditional Rendering
+isVisible && <Component /> 형태로 사용
+isVisible의 값에 따라서 Component를 표현함; 표현하고 싶은 변수를 isVisible로 사용할 수 도 있음.
